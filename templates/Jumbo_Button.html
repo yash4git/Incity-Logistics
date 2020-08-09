@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title> Home Page </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </head>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <body>
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">InCity Logistics</h4>
+          <p class="text-muted">Company Description</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="Test.html" class="navbar-brand d-flex align-items-center">
+        <strong>Midlane Technologies Private Ltd. </strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+<br>
+<div class="container">
+  <p>
+    <h3 align = "left"> Trip started </h3>
+    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Start Trip Message for Driver</a>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Start Trip Message for Customer </button>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle all Messages</button>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="card card-body">
+          Dear Driver, <br>
+
+  Trip Details as below - <br> <br>
+
+  Source - {{Input_Data["Source"]}} <br>
+  Destination - {{Input_Data["Destinetion"]}} <br>
+
+  Trip Kms - {{Input_Data["Distance"]}} Kms. <br>
+
+  Trip Fare - Rs. {{jumbodict["Payable Fare"]}} <br>
+  Partner Share - Rs.{{jumbodict["Partner Share"]}} <br>
+  Payment Mode - {{dictionary_jumbo["Payment_Mode"]}} <br>
+
+  Customer Contact - {{dictionary_jumbo["Customer_Details"]}} <br>
+  <br>
+  Contact Incity Support for more details. <br> <br>
+  -----------------------------------------------------
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample2">
+        <div class="card card-body">
+          In Progress.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <p>
+    <h3 align = "left"> Ongoing Trip </h3>
+    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Ongoing Trip Message for Driver</a>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">Ongoing Trip Message for Customer </button>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample3 multiCollapseExample4">Toggle all Messages</button>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample3">
+        <div class="card card-body">
+          In Progress.
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample4">
+        <div class="card card-body">
+          Dear Customer, <br>
+
+  Driver is on its way for trip. <br>
+  Expected to reach at Source Location in 20Mins. <br>
+  <br>
+  Trip Details as below - <br> <br>
+
+  *Source* - {{Input_Data["Source"]}}. <br>
+  *Destination* - {{Input_Data["Destinetion"]}}. <br> <br>
+
+  Trip Kms - {{Input_Data["Distance"]}}Kms. <br>
+
+  Estimated Fare - Rs. {jumbodict["Payable Fare"]}}
+          <br>
+  Payment Mode - {{dictionary_jumbo["Payment_Mode"]}} <br>
+  Driver Details - {{dictionary_jumbo["Driver_Number"]}} {{'('+dictionary["Driver_Name"]+ ')'}} <br>
+          <br>
+  Contact Incity Support for more details. <br><br>
+  ----------------------------------------------------
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="container">
+  <p>
+    <h3 align = "left"> Trip Completed </h3>
+    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls="multiCollapseExample5">Trip Completed Message for Driver</a>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">Trip Completed Message for Customer </button>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample5 multiCollapseExample6">Toggle all Messages</button>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample5">
+        <div class="card card-body">
+          Dear Partner, <br> <br>
+
+  Your Trip Completed Successfully. <br> <br>
+
+  *Trip ID* - {{dictionary_jumbo["Trip_ID"]}}* <br>
+  *Source* - {{Input_Data["Source"]}}. <br>
+  *Destination* - {{Input_Data["Destinetion"]}}. <br> <br>
+
+  *Actual Trip Fare* - Rs.{{jumbodict["Payable Fare"]}}* <br>
+  *Partner Revenue* - Rs.{{jumbodict["Partner Share"]}}* <br>
+  *Payment Mode* - {{dictionary_jumbo["Payment_Mode"]}}* <br> <br>
+
+  Contact Incity Support for more details. <br>
+  ---------------------------------------------------
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample6">
+        <div class="card card-body">
+          Dear Customer, <br> <br>
+
+  Your Trip Completed Successfully. <br> <br>
+  *Trip ID* - {{dictionary_jumbo["Trip_ID"]}} <br>
+  *Source* - {{Input_Data["Source"]}} <br>
+  *Destination* - {{Input_Data["Destinetion"]}} <br>
+
+  Trip Fare - Rs.{{jumbodict["Payable Fare"]}} <br>
+  Payment Mode - {{dictionary_jumbo["Payment_Mode"]}} <br>
+  <br>
+  Thank You. <br>
+  ----------------------------------------------------
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="container">
+  <p>
+    <h3 align = "left"> Payment Received </h3>
+    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample7" role="button" aria-expanded="false" aria-controls="multiCollapseExample7">Payment Received Message for Driver</a>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample8" aria-expanded="false" aria-controls="multiCollapseExample8">Payment Received Message for Customer </button>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample7 multiCollapseExample8">Toggle all Messages</button>
+  </p>
+  <div class="row">
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample7">
+        <div class="card card-body">
+          Dear Partner, <br>
+     Payment of Rs. {{jumbodict["Payable Fare"]}} is recieved. <br> <br>
+
+     Thank You. <br> <br>
+     ---------------------------------------------------------------
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="collapse multi-collapse" id="multiCollapseExample8">
+        <div class="card card-body">
+          Dear Customer, <br>
+             Payment of Rs. {{jumbodict["Payable Fare"]}} is recieved. <br> <br>
+
+             Thank You. <br> <br>
+             ---------------------------------------------------------------
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<footer class="my-5 pt-5 text-muted text-center text-small">
+<p class="mb-1">&copy; 2020-2021 Midlane Technologies Private Ltd. </p>
+</footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    <script src="form-validation.js"></script>
+
+  </body>
+</html>

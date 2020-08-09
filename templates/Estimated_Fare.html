@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title> Estimated Fare </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </head>
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .table {
+    border-radius: 5px;
+    width: 50%;
+    margin: 0px auto;
+    float: none;
+}
+.form-actions {
+    margin: 0;
+    background-color: blue;
+    text-align: center;
+}
+
+  </style>
+  <body>
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">InCity Logistics</h4>
+          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="Test.html" class="navbar-brand d-flex align-items-center">
+        <strong> Midlane Technologies Private Ltd. </strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="container">
+<div class="col-md-12 order-md-3">
+  <form action= '{{url_for("Micro_Page")}}' method="post" class="needs-validation" novalidate>
+    <h2 align = "left"> Micro </h2>
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <table class="table table-hover table-dark table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Actual Trip Fare </th>
+      <th scope="col">Total Trip Fare </th>
+      <th scope="col">Discount</th>
+      <th scope="col">Taxable Amount</th>
+      <th scope="col">Tax</th>
+      <th scope="col">Payable Fare </th>
+      <th scope="col">Partner Share</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_micro["Actual Trip Fare"]}} </td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_micro["Total Trip Fare"]}}</td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_micro["Discount"]}}</td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_micro["Taxable Amount"]}}</td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_micro["Tax"]}}</td>
+      <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_micro["Payable Fare"]}}</td>
+     <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_micro["Partner Share"]}}</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<div class="col-md-12 text-center">
+    <button type = "submit"  name="microbutton" class="btn btn-primary"> Proceed for Micro </button>
+</div>
+      </div>
+     </div>
+   <div class="col-md-12 order-md-3">
+     <form action= '{{url_for("Mini_Page")}}' method="post" class="needs-validation" novalidate>
+       <h2 align = "left"> Mini </h2>
+       <div class="row">
+         <div class="col-md-12 mb-3">
+           <table class="table table-hover table-dark table-bordered">
+     <thead>
+       <tr>
+         <th scope="col">Actual Trip Fare </th>
+         <th scope="col">Total Trip Fare </th>
+         <th scope="col">Discount</th>
+         <th scope="col">Taxable Amount</th>
+         <th scope="col">Tax</th>
+         <th scope="col">Payable Fare </th>
+         <th scope="col">Partner Share</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_mini["Actual Trip Fare"]}} </td>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_mini["Total Trip Fare"]}}</td>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_mini["Discount"]}}</td>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_mini["Taxable Amount"]}}</td>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_mini["Tax"]}}</td>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_mini["Payable Fare"]}}</td>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_mini["Partner Share"]}}</td>
+       </tr>
+     </tbody>
+   </table>
+   <br>
+   <div class="col-md-12 text-center">
+       <button type = "submit"  name="minibutton" class="btn btn-primary"> Proceed for Mini </button>
+   </div>
+   <div class="col-md-12 order-md-3">
+     <form action= '{{url_for("Jumbo_Page")}}' method="post" class="needs-validation" novalidate>
+       <h2 align = "left"> Jumbo </h2>
+       <div class="row">
+         <div class="col-md-12 mb-3">
+           <table class="table table-hover table-dark table-bordered">
+     <thead>
+       <tr>
+         <th scope="col">Actual Trip Fare </th>
+         <th scope="col">Total Trip Fare </th>
+         <th scope="col">Discount</th>
+         <th scope="col">Taxable Amount</th>
+         <th scope="col">Tax</th>
+         <th scope="col">Payable Fare </th>
+         <th scope="col">Partner Share</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_jumbo["Actual Trip Fare"]}} </td>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_jumbo["Total Trip Fare"]}}</td>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_jumbo["Discount"]}}</td>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_jumbo["Taxable Amount"]}}</td>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_jumbo["Tax"]}}</td>
+         <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_jumbo["Payable Fare"]}}</td>
+        <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{input_data_jumbo["Partner Share"]}}</td>
+       </tr>
+     </tbody>
+   </table>
+   <br>
+   <div class="col-md-12 text-center">
+       <button type = "submit" name="microbutton" class="btn btn-primary"> Proceed for Jumbo </button>
+   </div>
+         </div>
+         </div>
+     </form>
+   </div>
+         </div>
+</body>
+</html>
